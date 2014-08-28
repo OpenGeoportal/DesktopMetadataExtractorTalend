@@ -1,0 +1,486 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>Var=>south" expression="fromActualFile.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 2, &quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xA;        2, &quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.defaultYMin&#xA;  )          ">
+    <variables name="fromActualFile.driver" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.files" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.layer_name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.fid_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.columns_def" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.srs" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.epsg_code" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.geo_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.latlon_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.nb_features" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.error" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.dataType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdIndividualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdOrganisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPositionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdVoice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdDeliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCity" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdAdministrativeArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPostalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCountry" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdEmail" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdRole" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.individualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.organisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.positionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.voice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.deliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.city" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.adminArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.postalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.role" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.overviewUrlPrefix" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword2" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.geokeyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.accessConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraintsInfo" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useLimitation" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.scaleDenominator" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.language" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.charset" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.topicCategoryCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1URL" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1protocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsUrl" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mapFormat" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, TalendDate.getCurrentDate())  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.epsg_code  == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code  " value="null" talendType="id_String"/>
+    <variables name="context.titlePrefixVector + fromActualFile.layer_name  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false),&#xD;&#xA;       0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )            " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile&#xD;&#xA;  .latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent,   context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>north" expression="fromActualFile.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;Y&quot;) + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xA;       0, &quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.defaultYMax&#xA;  )          ">
+    <variables name="fromActualFile.driver" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.files" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.layer_name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.fid_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.columns_def" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.srs" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.epsg_code" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.geo_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.latlon_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.nb_features" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.error" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.dataType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdIndividualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdOrganisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPositionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdVoice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdDeliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCity" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdAdministrativeArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPostalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCountry" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdEmail" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdRole" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.individualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.organisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.positionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.voice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.deliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.city" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.adminArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.postalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.role" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.overviewUrlPrefix" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword2" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.geokeyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.accessConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraintsInfo" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useLimitation" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.scaleDenominator" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.language" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.charset" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.topicCategoryCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1URL" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1protocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsUrl" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mapFormat" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, TalendDate.getCurrentDate())  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.epsg_code  == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code  " value="null" talendType="id_String"/>
+    <variables name="context.titlePrefixVector + fromActualFile.layer_name  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false),&#xD;&#xA;       0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )            " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile&#xD;&#xA;  .latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent,   context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 2, &quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;        2, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMin&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>filepath" expression="context.file">
+    <variables name="fromActualFile.driver" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.files" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.layer_name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.fid_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.columns_def" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.srs" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.epsg_code" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.geo_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.latlon_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.nb_features" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.error" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.dataType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdIndividualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdOrganisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPositionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdVoice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdDeliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCity" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdAdministrativeArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPostalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCountry" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdEmail" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdRole" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.individualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.organisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.positionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.voice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.deliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.city" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.adminArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.postalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.role" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.overviewUrlPrefix" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword2" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.geokeyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.accessConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraintsInfo" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useLimitation" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.scaleDenominator" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.language" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.charset" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.topicCategoryCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1URL" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1protocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsUrl" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mapFormat" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, TalendDate.getCurrentDate())  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.epsg_code  == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code  " value="null" talendType="id_String"/>
+    <variables name="ge1name&quot; value=&quot;null&quot; talendType=&quot;id_String&quot; nullable=&quot;" value="    " talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false),&#xD;&#xA;       0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )            " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile&#xD;&#xA;  .latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent,   context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 2, &quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;        2, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMin&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;Y&quot;) + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       0, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>filename" expression="new java.io.File(context.file).getName()">
+    <variables name="fromActualFile.driver" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.files" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.layer_name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.fid_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.columns_def" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.srs" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.epsg_code" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.geo_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.latlon_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.nb_features" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.error" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.dataType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdIndividualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdOrganisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPositionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdVoice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdDeliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCity" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdAdministrativeArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPostalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCountry" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdEmail" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdRole" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.individualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.organisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.positionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.voice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.deliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.city" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.adminArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.postalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.role" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.overviewUrlPrefix" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword2" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.geokeyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.accessConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraintsInfo" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useLimitation" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.scaleDenominator" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.language" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.charset" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.topicCategoryCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1URL" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1protocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="tring&quot; nullable=&quot;true&quot;/>&#xD;&#xA;    &lt;" value="me=&quot;" talendType="perties.g" nullable="true"/>
+    <variables name="metadataProperties.linkage1description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsUrl" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mapFormat" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, TalendDate.getCurrentDate())  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.epsg_code  == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code  " value="null" talendType="id_String"/>
+    <variables name="context.titlePrefixVector + fromActualFile.layer_name  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false),&#xD;&#xA;       0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )            " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile&#xD;&#xA;  .latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent,   context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 2, &quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;        2, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMin&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;Y&quot;) + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       0, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="context.file " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>uuidbase" expression="Var.filename + &quot;#&quot; + fromActualFile.layer_name ">
+    <variables name="fromActualFile.driver" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.files" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.layer_name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.fid_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.columns_def" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.srs" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.epsg_code" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.geo_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.latlon_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.nb_features" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.error" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.dataType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdIndividualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdOrganisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPositionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdVoice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdDeliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCity" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdAdministrativeArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPostalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCountry" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdEmail" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdRole" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.individualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.organisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.positionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.voice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.deliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.city" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.adminArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.postalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.role" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.overviewUrlPrefix" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword2" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.geokeyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.accessConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraintsInfo" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useLimitation" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.scaleDenominator" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.language" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.charset" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.topicCategoryCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1URL" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1protocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsUrl" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mapFormat" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, TalendDate.getCurrentDate())  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.epsg_code  == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code  " value="null" talendType="id_String"/>
+    <variables name="context.titlePrefixVector + fromActualFile.layer_name  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false),&#xD;&#xA;       0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )            " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile&#xD;&#xA;  .latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent,   context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 2, &quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;        2, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMin&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;Y&quot;) + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       0, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="context.file " value="null" talendType="id_String"/>
+    <variables name="new java.io.File(context.file).getName() " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>mdUuid" expression="Utility.sha256Digest(Var.uuidbase ) ">
+    <variables name="fromActualFile.driver" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.files" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.layer_name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.fid_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.columns_def" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.srs" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.epsg_code" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.geo_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.latlon_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.nb_features" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.error" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.dataType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdIndividualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdOrganisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPositionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdVoice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdDeliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCity" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdAdministrativeArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPostalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCountry" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdEmail" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdRole" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.individualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.organisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.positionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.voice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.deliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.city" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.adminArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.postalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.role" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.overviewUrlPrefix" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword2" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.geokeyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.accessConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraintsInfo" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useLimitation" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.scaleDenominator" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.language" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.charset" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.topicCategoryCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1URL" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1protocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsUrl" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mapFormat" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, TalendDate.getCurrentDate())  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.epsg_code  == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code  " value="null" talendType="id_String"/>
+    <variables name="context.titlePrefixVector + fromActualFile.layer_name  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false),&#xD;&#xA;       0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )            " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile&#xD;&#xA;  .latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent,   context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 2, &quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;        2, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMin&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;Y&quot;) + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       0, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="context.file " value="null" talendType="id_String"/>
+    <variables name="new java.io.File(context.file).getName() " value="null" talendType="id_String"/>
+    <variables name="Var.filename + &quot;#&quot; + fromActualFile.layer_name  " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>fcatUuid" expression="Utility.sha256Digest(Var.uuidbase  + &quot;#iso19319&quot;) ">
+    <variables name="fromActualFile.driver" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.files" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.layer_name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.fid_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_column" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.columns_def" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.geom_type" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.srs" value="null" talendType="id_String" nullable="true"/>
+    <variables name="fromActualFile.epsg_code" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.geo_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.latlon_extent" value="null" talendType="id_Geometry" nullable="true"/>
+    <variables name="fromActualFile.nb_features" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="fromActualFile.error" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.dataType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdIndividualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdOrganisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPositionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdVoice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdDeliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCity" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdAdministrativeArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdPostalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdCountry" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdEmail" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mdRole" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.individualName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.organisationName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.positionName" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.voice" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.deliveryPoint" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.city" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.adminArea" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.postalCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.email" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.role" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.overviewUrlPrefix" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.keyword2" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.geokeyword" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.accessConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraints" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useConstraintsInfo" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.useLimitation" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.scaleDenominator" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.language" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.charset" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.topicCategoryCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1URL" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1protocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.linkage1description" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.lanFileProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsUrl" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsProtocol" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.wmsDesc" value="null" talendType="id_String" nullable="true"/>
+    <variables name="metadataProperties.mapFormat" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, TalendDate.getCurrentDate())  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.epsg_code  == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code  " value="null" talendType="id_String"/>
+    <variables name="context.titlePrefixVector + fromActualFile.layer_name  " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false),&#xD;&#xA;       0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )            " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile&#xD;&#xA;  .latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent,   context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 2, &quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;        2, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMin&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;Y&quot;) + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null &amp;&amp; fromActualFile.geo_extent != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;       GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), &#xD;&#xA;       0, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMax&#xD;&#xA;  )           " value="null" talendType="id_String"/>
+    <variables name="context.file " value="null" talendType="id_String"/>
+    <variables name="new java.io.File(context.file).getName() " value="null" talendType="id_String"/>
+    <variables name="Var.filename + &quot;#&quot; + fromActualFile.layer_name  " value="null" talendType="id_String"/>
+    <variables name="Utility.sha256Digest(Var.uuidbase )  " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+</xmi:XMI>
