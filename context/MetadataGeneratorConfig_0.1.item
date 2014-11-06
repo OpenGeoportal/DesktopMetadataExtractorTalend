@@ -16,4 +16,7 @@
   <contextParameter comment="" name="defaultYMin" prompt="defaultYMin?" promptNeeded="false" type="id_String" value="&quot;-90&quot;"/>
   <contextParameter comment="" name="defaultYMax" prompt="defaultYMax?" promptNeeded="false" type="id_String" value="&quot;90&quot;"/>
   <contextParameter comment="" name="titlePrefixRaster" prompt="titlePrefixRaster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
+  <contextParameter comment="" name="mdName" prompt="mdName?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter comment="" name="mdOrganization" prompt="mdOrganization?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" type="id_String" value="null"/>
 </talendfile:ContextType>

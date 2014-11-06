@@ -69,7 +69,7 @@
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tWarn_2"/>
   </node>
-  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/JuanLuis/Documents/Projects/tufts/workspace-tufts-metadata-editor/in.csv&quot;"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.metadataDir"/>
@@ -85,7 +85,7 @@
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tFileDelete_1"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="288">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Metadata folder removed : &quot; + context.metadataDir"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
@@ -102,7 +102,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileDelete_4" offsetLabelX="0" offsetLabelY="0" source="tFileDelete_4" target="tFileDelete_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.generateMetadataInSeparateDir == true"/>
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="//context.generateMetadataInSeparateDir == true&#xA;false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1"/>
   </connection>
@@ -116,6 +116,21 @@
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="false"/>
     <elementParameter field="RADIO" name="NOTETXT_RIGHT" value="false"/>
     <elementParameter field="RADIO" name="NOTETXT_CENTER" value="true"/>
+    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="true"/>
+    <elementParameter field="RADIO" name="NOTETXT_TOP" value="false"/>
+    <elementParameter field="RADIO" name="NOTETXT_BOTTOM" value="false"/>
+    <elementParameter field="TEXT" name="NOTE_FONT" value="Time New Roman"/>
+    <elementParameter field="TEXT" name="FONT_SIZE" value="10"/>
+    <elementParameter field="CHECK" name="FONT_BOLD" value="false"/>
+    <elementParameter field="CHECK" name="FONT_ITALIC" value="false"/>
+    <elementParameter field="COLOR" name="NOTE_LINECOLOR" value="237;201;122"/>
+  </note>
+  <note opaque="false" posX="192" posY="192" sizeHeight="64" sizeWidth="96" text="Temporally &#xD;&#xA;disabled">
+    <elementParameter field="COLOR" name="NOTE_COLOR" value="255;255;203"/>
+    <elementParameter field="COLOR" name="NOTETXT_COLOR" value="0;0;0"/>
+    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="false"/>
+    <elementParameter field="RADIO" name="NOTETXT_RIGHT" value="true"/>
+    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
     <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="true"/>
     <elementParameter field="RADIO" name="NOTETXT_TOP" value="false"/>
     <elementParameter field="RADIO" name="NOTETXT_BOTTOM" value="false"/>

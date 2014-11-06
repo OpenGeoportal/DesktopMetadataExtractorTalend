@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="Current file" name="file" prompt="file?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="Directory where data files are" name="dataDir" prompt="dataDir?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Directory" value="C:/Users/JuanLuis/Documents/Projects/tufts/sample-data/"/>
     <contextParameter comment="" name="defaultProjection" prompt="defaultProjection?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="&quot;EPSG:4326&quot;"/>
     <contextParameter comment="" name="defaultXMax" prompt="defaultXMax?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="&quot;180&quot;"/>
@@ -10,6 +10,9 @@
     <contextParameter comment="" name="defaultYMin" prompt="defaultYMin?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="&quot;-90&quot;"/>
     <contextParameter comment="" name="generateMetadataInSeparateDir" prompt="generateMetadataInSeparateDir?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Boolean" value="true"/>
     <contextParameter comment="The logs directory" name="logDirectory" prompt="logDirectory?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Directory" value="C:/temp/mdGenerator/logs"/>
+    <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="null"/>
+    <contextParameter comment="" name="mdName" prompt="mdName?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="null"/>
+    <contextParameter comment="" name="mdOrganization" prompt="mdOrganization?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="null"/>
     <contextParameter comment="Directory where metadata is generated if generateMetadataInSeparateDir is true" name="metadataDir" prompt="metadataDir?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Directory" value="c:/temp/mdGenerator/metadata"/>
     <contextParameter comment="List of extensions used by raster files as RegExp" name="rasterExtensions" prompt="rasterExtensions?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc&quot;"/>
     <contextParameter comment="Directory where configuration files are" name="resourceDir" prompt="resourceDir?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Directory" value="C:/Users/JuanLuis/Documents/Projects/tufts/sample-data/_resources/"/>
@@ -23,7 +26,7 @@
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="4"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
     <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
     <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
     <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
@@ -54,7 +57,7 @@
     <routinesParameter id="_fYG8IC1SEeStmZi-VHNfUA" name="OpenStreetMap"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
   </parameters>
-  <node componentName="sGdalInfoInput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
+  <node componentName="sGdalInfoInput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="sGdalInfoInput_2"/>
     <elementParameter field="CHECK" name="START" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
@@ -82,7 +85,7 @@
       <column key="false" length="255" name="bands" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="192">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -184,7 +187,7 @@
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="filename" expression="new java.io.File(context.file).getName()" type="id_String"/>
         <mapperTableEntries name="filepath" expression="context.file" type="id_String"/>
@@ -194,18 +197,21 @@
         <mapperTableEntries name="mdUuid" expression="Utility.sha256Digest(Var.uuidbase ) " type="id_String"/>
         <mapperTableEntries name="fcatUuid" expression="Utility.sha256Digest(Var.uuidbase  + &quot;#iso19110&quot;) " type="id_String"/>
         <mapperTableEntries name="layerName" expression="Var.filename.substring(0, Var.filename.indexOf(Var.fileext ) - 1) " type="id_String"/>
-        <mapperTableEntries name="east" expression="row2.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(row2.latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(row2.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), 2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )   " type="id_String"/>
-        <mapperTableEntries name="west" expression="row2.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(row2.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(row2.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), 0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )        " type="id_String"/>
-        <mapperTableEntries name="south" expression="row2.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(row2.latlon_extent , 2, &quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(row2.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false)&#xD;&#xA;       ,2,&quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMin&#xD;&#xA;  )         " type="id_String"/>
-        <mapperTableEntries name="north" expression="row2.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(row2.latlon_extent ,0,&quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(row2.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), 0, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMax&#xD;&#xA;  )          " type="id_String"/>
+        <mapperTableEntries name="east" expression="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 2, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), 2, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMax&#xD;&#xA;  )   " type="id_String"/>
+        <mapperTableEntries name="west" expression="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent, 0, &quot;X&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), 0, &quot;X&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultXMin&#xD;&#xA;  )        " type="id_String"/>
+        <mapperTableEntries name="south" expression="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent , 2, &quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false)&#xD;&#xA;       ,2,&quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMin&#xD;&#xA;  )         " type="id_String"/>
+        <mapperTableEntries name="north" expression="fromActualFile.latlon_extent != null ?&#xD;&#xA;  GeometryOperation.GETCOORDINATE(fromActualFile.latlon_extent ,0,&quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;  :  &#xD;&#xA;  (&#xD;&#xA;    context.defaultProjection != null ?&#xD;&#xA;      GeometryOperation.GETCOORDINATE(&#xD;&#xA;        GeometryOperation.PROJ(fromActualFile.geo_extent, context.defaultProjection, &quot;EPSG:4326&quot;, false), 0, &quot;Y&quot;)  + &quot;&quot;&#xD;&#xA;    : &#xD;&#xA;    context.defaultYMax&#xD;&#xA;  )          " type="id_String"/>
+        <mapperTableEntries name="mdName" expression="(context.mdName == null || &quot;&quot;.equals(context.mdName)) ? properties.mdIndividualName : context.mdName " type="id_String"/>
+        <mapperTableEntries name="mdOrganization" expression="(context.mdOrganization == null || &quot;&quot;.equals(context.mdOrganization)) ? properties.email : context.mdOrganization " type="id_String"/>
+        <mapperTableEntries name="mdEmail" expression="(context.mdEmail == null || &quot;&quot;.equals(context.mdEmail)) ? properties.email : context.mdEmail " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="info">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdLanguage" expression="&quot;fre&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdCharacterSet" expression="&quot;utf8&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="hierarchyLevel" expression="&quot;dataset&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdIndividualName" expression="properties.mdIndividualName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdOrganisationName" expression="properties.mdOrganisationName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdIndividualName" expression="Var.mdName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdOrganisationName" expression="Var.mdOrganization  " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdPositionName" expression="properties.mdPositionName" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdVoice" expression="properties.mdVoice" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdDeliveryPoint" expression="properties.mdDeliveryPoint" type="id_String" nullable="true"/>
@@ -213,12 +219,12 @@
         <mapperTableEntries name="mdAdministrativeArea" expression="properties.mdAdministrativeArea" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdPostalCode" expression="properties.mdPostalCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdCountry" expression="properties.mdCountry" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdEmail" expression="properties.mdEmail" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdEmail" expression="Var.mdEmail  " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdRole" expression="properties.mdRole" type="id_String" nullable="true"/>
         <mapperTableEntries name="dateStamp" expression="Var.dateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="standardName" expression="&quot;ISO 19115:2003/19139&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="standardVersion" expression="&quot;1.0&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="srs" expression="row2.epsg_code == -1 ? context.defaultProjection : &quot;EPSG:&quot; + row2.epsg_code " type="id_String" nullable="true"/>
+        <mapperTableEntries name="srs" expression="fromActualFile.epsg_code == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code " type="id_String" nullable="true"/>
         <mapperTableEntries name="title" expression="context.titlePrefixRaster + Var.filename   " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDate" expression="Var.dateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDateType" expression="&quot;publication&quot;" type="id_String" nullable="true"/>
@@ -262,7 +268,7 @@
         <mapperTableEntries name="south" expression="Var.south " type="id_String" nullable="true"/>
         <mapperTableEntries name="north" expression="Var.north " type="id_String" nullable="true"/>
         <mapperTableEntries name="supplementalInformation" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="formatName" expression="row2.driver " type="id_String" nullable="true"/>
+        <mapperTableEntries name="formatName" expression="fromActualFile.driver " type="id_String" nullable="true"/>
         <mapperTableEntries name="formatVersion" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage1URL" expression="properties.linkage1URL" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage1protocol" expression="properties.linkage1protocol" type="id_String" nullable="true"/>
@@ -285,7 +291,7 @@
         <mapperTableEntries name="errors" type="id_String" nullable="true"/>
         <mapperTableEntries name="extra" type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="fromActualFile" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="driver" type="id_String" nullable="true"/>
         <mapperTableEntries name="files" type="id_String" nullable="true"/>
         <mapperTableEntries name="x_size" type="id_Integer" nullable="true"/>
@@ -349,7 +355,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="32">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
     <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
@@ -579,7 +585,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
+  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAdvancedFileOutputXML_1"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -2143,7 +2149,7 @@
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tWarn_2"/>
   </node>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="sGdalInfoInput_2" offsetLabelX="0" offsetLabelY="0" source="sGdalInfoInput_2" target="tMap_1">
+  <connection connectorName="FLOW" label="fromActualFile" lineStyle="0" metaname="sGdalInfoInput_2" offsetLabelX="0" offsetLabelY="0" source="sGdalInfoInput_2" target="tMap_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
       <elementValue elementRef="TRACE_COLUMN" value="driver"/>
@@ -2193,7 +2199,7 @@
     <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="fromActualFile"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="sGdalInfoInput_2" offsetLabelX="0" offsetLabelY="0" source="sGdalInfoInput_2" target="tWarn_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;sGdalInfoInput_2_NB_ERRORS&quot;)) > 0"/>

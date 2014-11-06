@@ -10,6 +10,9 @@
     <contextParameter comment="" name="defaultYMin" prompt="defaultYMin?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="&quot;-90&quot;"/>
     <contextParameter comment="" name="generateMetadataInSeparateDir" prompt="generateMetadataInSeparateDir?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Boolean" value="true"/>
     <contextParameter comment="The logs directory" name="logDirectory" prompt="logDirectory?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Directory" value="C:/temp/mdGenerator/logs"/>
+    <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="null"/>
+    <contextParameter comment="" name="mdName" prompt="mdName?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="null"/>
+    <contextParameter comment="" name="mdOrganization" prompt="mdOrganization?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="null"/>
     <contextParameter comment="Directory where metadata is generated if generateMetadataInSeparateDir is true" name="metadataDir" prompt="metadataDir?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Directory" value="c:/temp/mdGenerator/metadata"/>
     <contextParameter comment="List of extensions used by raster files as RegExp" name="rasterExtensions" prompt="rasterExtensions?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc&quot;"/>
     <contextParameter comment="Directory where configuration files are" name="resourceDir" prompt="resourceDir?" promptNeeded="false" repositoryContextId="_Ar7pEC1aEeStmZi-VHNfUA" type="id_Directory" value="C:/Users/JuanLuis/Documents/Projects/tufts/sample-data/_resources/"/>
@@ -222,7 +225,7 @@
     <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.file"/>
-    <elementParameter field="TEXT" name="LAYER" value="((String)globalMap.get(&quot;row1.layer_name&quot;))"/>
+    <elementParameter field="TEXT" name="LAYER" value="((String)globalMap.get(&quot;fileRow.layer_name&quot;))"/>
     <elementParameter field="TEXT" name="FIELD_SEPARATOR" value="&quot;|&quot;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.talend.sdi.geometry.Geometry;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -368,14 +371,17 @@
         <mapperTableEntries name="uuidbase" expression="Var.filename + &quot;#&quot; + fromActualFile.layer_name  " type="id_String"/>
         <mapperTableEntries name="mdUuid" expression="Utility.sha256Digest(Var.uuidbase )  " type="id_String"/>
         <mapperTableEntries name="fcatUuid" expression="Utility.sha256Digest(Var.uuidbase  + &quot;#iso19319&quot;)  " type="id_String"/>
+        <mapperTableEntries name="mdName" expression="(context.mdName == null || context.mdName.equals(&quot;&quot;))? metadataProperties.mdIndividualName : context.mdName " type="id_String"/>
+        <mapperTableEntries name="mdOrganization" expression="(context.mdOrganization == null || &quot;&quot;.equals(context.mdOrganization)) ? metadataProperties.organisationName : context.mdOrganization " type="id_String"/>
+        <mapperTableEntries name="mdEmail" expression="(context.mdEmail == null || &quot;&quot;.equals(context.mdEmail))? metadataProperties.mdEmail : context.mdEmail " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="iso19139">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdLanguage" expression="metadataProperties.language " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdCharacterSet" expression="&quot;utf-8&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="hierarchyLevel" expression="&quot;dataset&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdIndividualName" expression="metadataProperties.mdIndividualName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdOrganisationName" expression="metadataProperties.mdOrganisationName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdIndividualName" expression="Var.mdName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdOrganisationName" expression="Var.mdOrganization  " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdPositionName" expression="metadataProperties.mdPositionName " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdVoice" expression="metadataProperties.mdVoice " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdDeliveryPoint" expression="metadataProperties.mdDeliveryPoint " type="id_String" nullable="true"/>
@@ -383,7 +389,7 @@
         <mapperTableEntries name="mdAdministrativeArea" expression="metadataProperties.mdAdministrativeArea " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdPostalCode" expression="metadataProperties.mdPostalCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdCountry" expression="metadataProperties.mdCountry" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdEmail" expression="metadataProperties.mdEmail " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdEmail" expression="Var.mdEmail  " type="id_String" nullable="true"/>
         <mapperTableEntries name="mdRole" expression="metadataProperties.mdRole " type="id_String" nullable="true"/>
         <mapperTableEntries name="dateStamp" expression="Var.dateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="standardName" expression="&quot;ISO 19115:2003/19139&quot;" type="id_String" nullable="true"/>
@@ -2317,7 +2323,7 @@
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="sOGRInfoInput_1" offsetLabelX="0" offsetLabelY="0" source="sOGRInfoInput_1" target="tFlowToIterate_1">
+  <connection connectorName="FLOW" label="fileRow" lineStyle="0" metaname="sOGRInfoInput_1" offsetLabelX="14" offsetLabelY="8" source="sOGRInfoInput_1" target="tFlowToIterate_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
       <elementValue elementRef="TRACE_COLUMN" value="driver"/>
@@ -2367,7 +2373,7 @@
     <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="fileRow"/>
   </connection>
   <connection connectorName="FLOW" label="geometryType" lineStyle="8" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tReplaceList_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -2446,7 +2452,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="sOGRInfoInput_3" offsetLabelX="0" offsetLabelY="0" source="sOGRInfoInput_3" target="tReplaceList_1">
+  <connection connectorName="FLOW" label="layerRow" lineStyle="0" metaname="sOGRInfoInput_3" offsetLabelX="0" offsetLabelY="0" source="sOGRInfoInput_3" target="tReplaceList_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
       <elementValue elementRef="TRACE_COLUMN" value="driver"/>
@@ -2496,7 +2502,7 @@
     <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="layerRow"/>
   </connection>
   <connection connectorName="FLOW" label="iso19139" lineStyle="0" metaname="iso19139" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tAdvancedFileOutputXML_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>

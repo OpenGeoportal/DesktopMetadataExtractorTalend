@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_XActoC1SEeStmZi-VHNfUA" label="Tufts_Metadata_Generator" description="" language="java" technicalLabel="TUFTS_METADATA_GENERATOR" local="true" author="_XB5fIC1SEeStmZi-VHNfUA" productVersion="Talend Open Studio for Data Integration-5.5.1.r118616" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_XActoC1SEeStmZi-VHNfUA" label="tufts_metadata_generator" description="" language="java" technicalLabel="TUFTS_METADATA_GENERATOR" local="true" author="_XB5fIC1SEeStmZi-VHNfUA" productVersion="Talend Open Studio for Data Integration-5.5.1.r118616" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_fKWM8C1SEeStmZi-VHNfUA" label="development" code="DEV"/>
     <technicalStatus xmi:id="_fKWM8S1SEeStmZi-VHNfUA" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_fKWM8i1SEeStmZi-VHNfUA" label="production" code="PROD"/>
