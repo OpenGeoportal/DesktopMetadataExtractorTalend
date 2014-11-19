@@ -96,9 +96,9 @@
     <elementParameter field="TEXT" name="TO" value="1"/>
     <elementParameter field="TEXT" name="STEP" value="1"/>
     <elementParameter field="CHECK" name="INCREASE" value="true"/>
-    <elementParameter field="TEXT" name="DECLARATION" value="&quot;int i=0&quot;"/>
-    <elementParameter field="TEXT" name="CONDITION" value="&quot;i&lt;10&quot;"/>
-    <elementParameter field="TEXT" name="ITERATION" value="&quot;i++&quot;"/>
+    <elementParameter field="TEXT" name="DECLARATION" value="int i=0"/>
+    <elementParameter field="TEXT" name="CONDITION" value="i&lt;10"/>
+    <elementParameter field="TEXT" name="ITERATION" value="i++"/>
     <elementParameter field="TEXT" name="LABEL" value="callScan"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
