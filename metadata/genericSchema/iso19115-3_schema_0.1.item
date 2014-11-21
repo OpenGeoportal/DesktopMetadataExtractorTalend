@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_63f30HFeEeSvhIVGf_OGZQ" comment="connectionComment" label="connectionLabel" dataPackage="_63f30XFeEeSvhIVGf_OGZQ"/>
+  <TalendMetadata:GenericPackage xmi:id="_63f30XFeEeSvhIVGf_OGZQ" dataManager="_63f30HFeEeSvhIVGf_OGZQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_63f30nFeEeSvhIVGf_OGZQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f303FeEeSvhIVGf_OGZQ" name="mdIdentifier" id="495" label="mdIdentifier" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f31HFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f31XFeEeSvhIVGf_OGZQ" name="mdLanguage" id="496" label="mdLanguage" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f31nFeEeSvhIVGf_OGZQ" body="&quot;eng&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f313FeEeSvhIVGf_OGZQ" name="mdCharacterSetCode" id="497" label="mdCharacterSetCode" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f32HFeEeSvhIVGf_OGZQ" body="&quot;utf-8&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f32XFeEeSvhIVGf_OGZQ" name="ciRoleCode" id="498" label="ciRoleCode" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f32nFeEeSvhIVGf_OGZQ" body="&quot;pointOfContact&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f323FeEeSvhIVGf_OGZQ" name="mdOrganisation" id="499" label="mdOrganisation" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f33HFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f33XFeEeSvhIVGf_OGZQ" name="mdVoice" id="500" label="mdVoice" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f33nFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f333FeEeSvhIVGf_OGZQ" name="mdIndividualName" id="501" label="mdIndividualName" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f34HFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f34XFeEeSvhIVGf_OGZQ" name="mdPositionName" id="502" label="mdPositionName" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f34nFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f343FeEeSvhIVGf_OGZQ" name="mdDeliveryPoint" id="503" label="mdDeliveryPoint" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f35HFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f35XFeEeSvhIVGf_OGZQ" name="mdCity" id="504" label="mdCity" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f35nFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f353FeEeSvhIVGf_OGZQ" name="mdAdministrativeArea" id="505" label="mdAdministrativeArea" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f36HFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f36XFeEeSvhIVGf_OGZQ" name="mdPostalCode" id="506" label="mdPostalCode" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f36nFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f363FeEeSvhIVGf_OGZQ" name="mdCountry" id="507" label="mdCountry" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f37HFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f37XFeEeSvhIVGf_OGZQ" name="mdEmail" id="508" label="mdEmail" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f37nFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f373FeEeSvhIVGf_OGZQ" name="mdDate" id="509" comment="Date of metadata creation" label="mdDate" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f38HFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f38XFeEeSvhIVGf_OGZQ" name="title" id="510" label="title" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f38nFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f383FeEeSvhIVGf_OGZQ" name="organisationName" id="511" label="organisationName" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f39HFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63f39XFeEeSvhIVGf_OGZQ" name="voice" id="512" label="voice" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63f39nFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge4HFeEeSvhIVGf_OGZQ" name="email" id="513" label="email" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge4XFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge4nFeEeSvhIVGf_OGZQ" name="individualName" id="514" label="individualName" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge43FeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge5HFeEeSvhIVGf_OGZQ" name="positionName" id="515" label="positionName" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge5XFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge5nFeEeSvhIVGf_OGZQ" name="deliveryPoint" id="516" label="deliveryPoint" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge53FeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge6HFeEeSvhIVGf_OGZQ" name="city" id="517" label="city" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge6XFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge6nFeEeSvhIVGf_OGZQ" name="administrativeArea" id="518" label="administrativeArea" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge63FeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge7HFeEeSvhIVGf_OGZQ" name="postalCode" id="519" label="postalCode" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge7XFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge7nFeEeSvhIVGf_OGZQ" name="country" id="520" label="country" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge73FeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge8HFeEeSvhIVGf_OGZQ" name="spatialRepresentationType" id="521" label="spatialRepresentationType" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge8XFeEeSvhIVGf_OGZQ" body="&quot;vector&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge8nFeEeSvhIVGf_OGZQ" name="scaleDenominator" id="522" label="scaleDenominator" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_63ge83FeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge9HFeEeSvhIVGf_OGZQ" name="topicCategoryCode" id="523" label="topicCategoryCode" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_63ge9XFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge9nFeEeSvhIVGf_OGZQ" name="west" id="524" label="west" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge93FeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge-HFeEeSvhIVGf_OGZQ" name="east" id="525" label="east" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge-XFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge-nFeEeSvhIVGf_OGZQ" name="south" id="526" label="south" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge-3FeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge_HFeEeSvhIVGf_OGZQ" name="north" id="527" label="north" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge_XFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63ge_nFeEeSvhIVGf_OGZQ" name="mdMaintenanceFrequencyCode" id="528" label="mdMaintenanceFrequencyCode" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63ge_3FeEeSvhIVGf_OGZQ" body="&quot;asNeeded&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfAHFeEeSvhIVGf_OGZQ" name="keyword" id="529" label="keyword" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_63gfAXFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfAnFeEeSvhIVGf_OGZQ" name="keyword2" id="530" label="keyword2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_63gfA3FeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfBHFeEeSvhIVGf_OGZQ" name="keyworkd1_theme" id="531" label="keyworkd1_theme" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63gfBXFeEeSvhIVGf_OGZQ" body="&quot;theme&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfBnFeEeSvhIVGf_OGZQ" name="keyword2_theme" id="532" label="keyword2_theme" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63gfB3FeEeSvhIVGf_OGZQ" body="&quot;place&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfCHFeEeSvhIVGf_OGZQ" name="useConstraints" id="533" label="useConstraints" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_63gfCXFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfCnFeEeSvhIVGf_OGZQ" name="scopeCode" id="534" label="scopeCode" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63gfC3FeEeSvhIVGf_OGZQ" body="&quot;dataset&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfDHFeEeSvhIVGf_OGZQ" name="lineage" id="535" label="lineage" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_63gfDXFeEeSvhIVGf_OGZQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_79KYAHFhEeSvhIVGf_OGZQ" name="srs" label="srs" talendType="id_String">
+        <initialValue xmi:id="_-3A6AHFhEeSvhIVGf_OGZQ" body="&quot;WGS 1984&quot;"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

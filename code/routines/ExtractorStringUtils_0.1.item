@@ -34,7 +34,7 @@ public class ExtractorStringUtils {
 	 */
 	public static String returnFirstNotNullOrBlank(String... stringToCheck) {
 		for (String s : stringToCheck) {
-			if (s != null && !s.trim().equals("")) {
+			if (s != null && !s.trim().equals("null") && !s.trim().equals("")) {
 				return s;
 			}
 		}
