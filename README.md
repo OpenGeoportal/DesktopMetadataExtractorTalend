@@ -27,6 +27,28 @@ $ git clone git@eos.geocat.net:tufts/metadata_generator.git
 
 - Open Talend Studio and import the folder metadata_generator, created in previous step.
 
+For windows:
+
+- Add to the ```PATH``` variable these values:
+
+```
+C:\Program Files\GDAL\
+C:\Program Files\GDAL\java
+```
+
+- Define environment variable ```LD_LIBRARY_PATH``` with this value:
+
+```
+C:\Program Files\GDAL\java
+```
+
+For linux/mac:
+
+- Add this in the advanced run tab of the process (set correct path):
+
+```
+-Djava.library.path=/path/to/gdal-1.9.1/swig/java
+```
 
 Build/Create intaller
 ---------------------
