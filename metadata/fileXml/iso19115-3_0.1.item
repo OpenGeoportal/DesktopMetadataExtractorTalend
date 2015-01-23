@@ -395,6 +395,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EEUP4HFjEeSvhIVGf_OGZQ" name="srs" label="srs" talendType="id_String">
         <initialValue xmi:id="_GPixUHFjEeSvhIVGf_OGZQ" body="&quot;EPSG:4326&quot;"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Mh0EAKJgEeS2vofyFYvWuw" name="layerName" label="layerName" talendType="id_String"/>
     </ownedElement>
   </orgomg.cwm.resource.record:RecordFile>
 </xmi:XMI>

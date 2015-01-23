@@ -358,6 +358,8 @@
       <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;WGS 1984&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="layerName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -526,6 +528,8 @@
         <mapperTableEntries name="scopeCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="lineage" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="srs" expression="Var.srs " type="id_String" nullable="true"/>
+        <mapperTableEntries name="columnsDef" type="id_String" nullable="true"/>
+        <mapperTableEntries name="layerName" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="fromActualFile" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="driver" type="id_String" nullable="true"/>
@@ -2277,49 +2281,51 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
     <elementParameter field="TEXT" name="LABEL" value="iso19115_3"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata_iso19115-3" name="tAdvancedFileOutputXML_2">
-      <column comment="" defaultValue="" key="false" name="mdIdentifier" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;eng&quot;" key="false" name="mdLanguage" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;utf-8&quot;" key="false" name="mdCharacterSetCode" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;pointOfContact&quot;" key="false" name="ciRoleCode" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdOrganisation" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdVoice" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdIndividualName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdPositionName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdDeliveryPoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdCity" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdAdministrativeArea" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdPostalCode" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdCountry" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="mdEmail" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="Date of metadata creation" defaultValue="" key="false" name="mdDate" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="title" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="organisationName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="voice" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="email" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="individualName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="positionName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="deliveryPoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="city" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="administrativeArea" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="postalCode" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="country" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;vector&quot;" key="false" name="spatialRepresentationType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="scaleDenominator" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="west" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="east" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="south" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="north" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" name="mdMaintenanceFrequencyCode" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;theme&quot;" key="false" name="keyworkd1_theme" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;place&quot;" key="false" name="keyword2_theme" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="useConstraints" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;dataset&quot;" key="false" name="scopeCode" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" name="lineage" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;EPSG:4326&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" label="metadata" name="tAdvancedFileOutputXML_2">
+      <column comment="" key="false" length="0" name="mdIdentifier" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="mdLanguage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;utf-8&quot;" key="false" length="0" name="mdCharacterSetCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;pointOfContact&quot;" key="false" length="0" name="ciRoleCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdOrganisation" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdVoice" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdIndividualName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdPositionName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdDeliveryPoint" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdCity" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdAdministrativeArea" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdPostalCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdCountry" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="mdEmail" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="Date of metadata creation" key="false" length="0" name="mdDate" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="voice" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="email" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="deliveryPoint" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="city" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="administrativeArea" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="postalCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="country" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentationType" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="scaleDenominator" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="west" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="east" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="south" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="north" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="mdMaintenanceFrequencyCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyworkd1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;place&quot;" key="false" length="0" name="keyword2_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="useConstraints" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;WGS 1984&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="layerName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="32" posY="320">

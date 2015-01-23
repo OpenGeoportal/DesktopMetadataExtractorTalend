@@ -129,6 +129,8 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_79KYAHFhEeSvhIVGf_OGZQ" name="srs" label="srs" talendType="id_String">
         <initialValue xmi:id="_-3A6AHFhEeSvhIVGf_OGZQ" body="&quot;WGS 1984&quot;"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_luh30KIjEeS2vofyFYvWuw" name="columnsDef" label="columnsDef" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cFkFwKJgEeS2vofyFYvWuw" name="layerName" label="layerName" talendType="id_String"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>
