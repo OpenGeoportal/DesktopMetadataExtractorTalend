@@ -131,6 +131,7 @@
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_luh30KIjEeS2vofyFYvWuw" name="columnsDef" label="columnsDef" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cFkFwKJgEeS2vofyFYvWuw" name="layerName" label="layerName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pXaqgLBPEeSvxcZfQsEyUQ" name="bands" label="bands" talendType="id_String"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>
