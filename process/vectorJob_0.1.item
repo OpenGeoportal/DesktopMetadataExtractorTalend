@@ -1445,7 +1445,7 @@
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\JuanLuis\local\TOS_DI-Win32-20141024_1545-V5.6.0\configuration\lib\java"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="(context.generateMetadataInSeparateDir ? context.metadataDir +&quot;/&quot; +  new java.io.File(context.file).getName() : context.file )  + &quot;_md_iso19115-3-.xml&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="(context.generateMetadataInSeparateDir ? context.metadataDir +&quot;/&quot; +  new java.io.File(context.file).getName() : context.file )  + &quot;_md_iso19115-3.xml&quot;"/>
     <elementParameter field="TABLE" name="ROOT">
       <elementValue elementRef="PATH" value="/mdb:MD_Metadata"/>
       <elementValue elementRef="COLUMN" value=""/>
