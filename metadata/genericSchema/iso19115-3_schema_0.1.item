@@ -111,7 +111,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfAnFeEeSvhIVGf_OGZQ" name="keyword2" id="530" label="keyword2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <initialValue xmi:id="_63gfA3FeEeSvhIVGf_OGZQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfBHFeEeSvhIVGf_OGZQ" name="keyworkd1_theme" id="531" label="keyworkd1_theme" sourceType="" talendType="id_String">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfBHFeEeSvhIVGf_OGZQ" name="keyword1_theme" id="531" label="keyword1_theme" sourceType="" talendType="id_String">
         <initialValue xmi:id="_63gfBXFeEeSvhIVGf_OGZQ" body="&quot;theme&quot;"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_63gfBnFeEeSvhIVGf_OGZQ" name="keyword2_theme" id="532" label="keyword2_theme" sourceType="" talendType="id_String">
