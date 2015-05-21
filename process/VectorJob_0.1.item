@@ -484,7 +484,7 @@
       <column key="false" length="255" name="layer_name" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="error" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata comment="" label="metadata" name="iso19115_3">
+    <metadata comment="" connector="FLOW" label="metadata" name="iso19115_3">
       <column comment="" key="false" length="0" name="mdIdentifier" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="mdLanguage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;utf-8&quot;" key="false" length="0" name="mdCharacterSetCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -532,7 +532,7 @@
       <column comment="" key="false" length="0" name="bands" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="dateStamp" expression="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, TalendDate.getCurrentDate())  " type="id_String"/>
         <mapperTableEntries name="srs" expression="fromActualFile.epsg_code  == -1 ? context.defaultProjection : &quot;EPSG:&quot; + fromActualFile.epsg_code  " type="id_String"/>
@@ -1145,8 +1145,8 @@
       <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;WGS 1984&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="layerName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="bands" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1160,7 +1160,7 @@
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
     <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
     <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="TRIM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM" value="true"/>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
     <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
@@ -1203,14 +1203,15 @@
       <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="mdMaintenanceFrequencyCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyworkd1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyword1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;place&quot;" key="false" length="0" name="keyword2_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="useConstraints" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;WGS 1984&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="layerName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="bands" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colPrecision" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1252,14 +1253,15 @@
       <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="mdMaintenanceFrequencyCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyworkd1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyword1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;place&quot;" key="false" length="0" name="keyword2_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="useConstraints" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;WGS 1984&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="layerName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="bands" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colPrecision" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1272,8 +1274,8 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DUMMY" value="true"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\JuanLuis\local\TOS_DI-Win32-20141024_1545-V5.6.0\configuration\lib\java"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
@@ -1356,7 +1358,7 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="keyword2"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="keyworkd1_theme"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="keyword1_theme"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="keyword2_theme"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -1368,9 +1370,11 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="srs"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="layerName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="columnsDef"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="layerName"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="bands"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="colName"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -1418,14 +1422,15 @@
       <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="mdMaintenanceFrequencyCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyworkd1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyword1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;place&quot;" key="false" length="0" name="keyword2_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="useConstraints" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;WGS 1984&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="layerName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="bands" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colPrecision" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
@@ -2574,7 +2579,7 @@
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
       <elementValue elementRef="ORDER" value="235"/>
       <elementValue elementRef="PATH" value="codeListValue"/>
-      <elementValue elementRef="COLUMN" value="keyworkd1_theme"/>
+      <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
       <elementValue elementRef="ORDER" value="236"/>
@@ -2793,6 +2798,11 @@
       <elementValue elementRef="VALUE" value="false"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="271"/>
+      <elementValue elementRef="PATH" value="/mdb:MD_Metadata/mdb:contentInfo/mrc:MD_FeatureCatalogue/mrc:featureCatalogue/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="272"/>
       <elementValue elementRef="PATH" value="/mdb:MD_Metadata/mdb:contentInfo/mrc:MD_FeatureCatalogue/mrc:featureCatalogue/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:featureCatalogue"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
@@ -2876,15 +2886,10 @@
     </elementParameter>
     <elementParameter field="TABLE" name="GROUP"/>
     <elementParameter field="TABLE" name="LOOP">
-      <elementValue elementRef="PATH" value="/mdb:MD_Metadata/mdb:contentInfo/mrc:MD_FeatureCatalogue/mrc:featureCatalogue/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="272"/>
       <elementValue elementRef="PATH" value="/mdb:MD_Metadata/mdb:contentInfo/mrc:MD_FeatureCatalogue/mrc:featureCatalogue/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
       <elementValue elementRef="ORDER" value="273"/>
       <elementValue elementRef="PATH" value="/mdb:MD_Metadata/mdb:contentInfo/mrc:MD_FeatureCatalogue/mrc:featureCatalogue/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:memberName"/>
       <elementValue elementRef="COLUMN" value="colName"/>
@@ -2973,14 +2978,15 @@
       <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="mdMaintenanceFrequencyCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyworkd1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keyword1_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;place&quot;" key="false" length="0" name="keyword2_theme" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="useConstraints" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;WGS 1984&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="layerName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnsDef" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="bands" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colPrecision" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
